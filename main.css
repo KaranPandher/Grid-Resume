@@ -1,0 +1,86 @@
+/* Browser Reset */ 
+*{
+    font-size: 16px; 
+    padding: 0;
+    margin: 0; 
+}
+body{ 
+    font-family: sans-serif;
+}
+/* VERY CRUCIAL REQUIRED TO DISPLAY: GRID */
+body{display:grid;}
+.navi{grid-area: navi;}
+.hero{grid-area: hero;}
+.about{grid-area: about;}
+.content-1{grid-area: content-1;}
+.content-2{grid-area: content-2;}
+.content-3{grid-area: content-3;}
+.education-1{grid-area: education-1;}
+.education-2{grid-area: education-2;}
+.experience-1{grid-area: experience-1;}
+.experience-2{grid-area: experience-2;}
+.experience-3{grid-area: experience-3;}
+.experience-4{grid-area: experience-4;}
+.technial{grid-area: technical;}
+.soft{grid-area: soft;}
+.links{grid-area: links;}
+
+/* Mobile Version First */
+
+@media screen and (min-width: 500px) {
+    body{
+        display: grid;
+        grid-template-columns: 100%; /* 1 columns */ 
+        grid-template-rows: 
+            30vh 30vh 30vh 30vh 30vh 30vh 
+            30vh 30vh 30vh 30vh 30vh 30vh
+            30vh 30vh 30vh;
+        grid-template-areas: 
+            "navi" 
+            "hero"
+            "about"
+            "content-1"
+            "content-2"
+            "content-3"
+            "education-1"
+            "education-2"
+            "experience-1"
+            "experience-2"
+            "experience-3"
+            "experience-4"
+            "technical"
+            "soft"
+            "links";
+    }
+}
+
+/* Desktop Size */ 
+@media screen and (min-width: 1024px) {
+    body{
+        
+        grid-template-columns: 33.333% 16.666% 16.666% 33.333%;
+        grid-template-rows: auto;
+        /* switch to auto */
+        grid-template-areas: 
+        "navi navi navi navi"
+        "hero hero hero hero"
+        "about about about about"
+        "content-1 content-2 content-2 content-3"
+        "education-1 education-1 education-2 education-2"
+        "experience-1 experience-1 experience-1 experience-1"
+        "experience-2 experience-2 experience-2 experience-2"
+        "experience-3 experience-3 experience-3 experience-3"
+        "experience-4 experience-4 experience-4 experience-4"
+        "technical technical soft soft"
+        "links links links links";
+    }
+}
+
+.content-1,
+.content-2,
+.content-3{
+    width: 50%;
+    height: 150%;
+    justify-self: center;
+    align-self: center;
+}
