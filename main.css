@@ -8,9 +8,10 @@ body > * {
     border: 2px solid red;
 }
 
-h2{ 
+.about h2{ 
     padding: 15px;
     font-size: 25px;
+    padding-top: 50px;
 }
 
 #techbg{
@@ -20,14 +21,14 @@ h2{
 .about {
     font-size: 16px;
     text-align: center;
-    background-color: blue;
+    background-color: #041e42;
     color: white;
     padding: 20px;
     
 }
 
 .about p {
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 200px;
     margin-right: 200px;
     margin-bottom: 10px;
@@ -45,7 +46,7 @@ body{
 }
 .hero h1{ 
     padding: 15px;
-    font-size: 25px;
+    font-size: 35px;
 }
 /* VERY CRUCIAL REQUIRED TO DISPLAY: GRID */
 body{display:grid;}
@@ -88,6 +89,8 @@ body{display:grid;}
             "technical"
             "soft"
             "links";
+
+    
     }
 }
 
@@ -96,7 +99,7 @@ body{display:grid;}
     body{
         
         grid-template-columns: 33.333% 16.666% 16.666% 33.333%;
-        grid-template-rows: 10vh 80vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh;
+        grid-template-rows: 10vh 55vh 33vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh;
         /* switch to auto */
         grid-template-areas: 
         "navi navi navi navi"
@@ -117,7 +120,58 @@ body{display:grid;}
 .content-2,
 .content-3{
     width: 90%;
-    height: 150%;
+    height: 170%;
     justify-self: center;
     align-self: center;
+    background-color: #ffffff;
+    text-align: center;  
+}
+
+.content-1 ul,
+.content-2 ul, 
+.content-3 ul {
+    padding: 0;
+    text-decoration: none;
+    list-style: none; /* Gets rid of the bullet points */ 
+}
+
+.content-1 ul li,
+.content-2 ul li,
+.content-3 ul li {
+    text-decoration: none;
+    padding: 5px;
+}
+
+.content-1 h2,
+.content-2 h2, 
+.content-3 h2 { /* Adding space between the header and the text */
+    padding: 20px;  
+    font-size: 25px;
+}
+
+.content-1 h4,
+.content-2 h4, 
+.content-3 h4 { /* Adding space between the header and the text */ 
+    padding: 25px;
+    color: #041e42;
+}
+
+.content-1 p,
+.content-2 p,
+.content-3 p { /* Adding padding for all the paragraph texts */ 
+    padding-left: 15px;
+    padding-right: 15px;  
+    padding-bottom: 15px;  
+}
+
+.content-1 .fas,
+.content-2 .fas,
+.content-3 .far {
+    padding: 20px;
+}
+
+.education-1 h2{
+    padding-top: 160px;
+    font-size: 20px;
+    padding-left: 15px;
 }
