@@ -107,7 +107,7 @@ body{display:grid;}
     body{
         display: grid;
         grid-template-columns: 100%; /* 1 columns */ 
-        grid-template-rows: auto;
+        grid-template-rows: 4vh 80vh 70vh 60vh 55vh 30vh 20vh 30vh 20vh 25vh 25vh 25vh 5vh;
         grid-template-areas: 
             "navi" 
             "hero"
@@ -122,8 +122,42 @@ body{display:grid;}
             "experience-3"
             "experience-4"
             "links";
+    }
+    .about p {
+        margin-top: 20px;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 10px;
+    }
+    .content-1,
+    .content-2,
+    .content-3{
+    width: 90%;
+    height: 50%;
+    justify-self: center;
+    align-self: center;
+    background-color: #ffffff;
+    text-align: center;  
+    font-family: 'Jura';
+    border: 3px solid #041e42;
+    }
+    .content-1{
+        height: 60%;
+    }
 
-    
+    .education-2 h2{ /* Padding from Content area and font customization */
+    padding-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    }
+
+    .experience-1 p,
+    .experience-2 p,
+    .experience-3 p,
+    .experience-4 p{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
     }
 }
 
@@ -132,7 +166,7 @@ body{display:grid;}
     body{
         
         grid-template-columns: 33.333% 16.666% 16.666% 33.333%;
-        grid-template-rows: 4vh 55vh 33vh 30vh 30vh 20vh 10vh 10vh 10vh 5vh;
+        grid-template-rows: 4vh 75vh 50vh 30vh 40vh 25vh 15vh 10vh 10vh 5vh;
         /* switch to auto */
         grid-template-areas: 
         "navi navi navi navi"
@@ -152,7 +186,7 @@ body{display:grid;}
 .content-2,
 .content-3{
     width: 90%;
-    height: 170%;
+    height: 210%;
     justify-self: center;
     align-self: center;
     background-color: #ffffff;
