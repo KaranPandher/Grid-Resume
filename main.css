@@ -4,14 +4,15 @@
     padding: 0;
     margin: 0; 
 }
-body > * {
-    border: 2px solid red;
-}
 
+body {
+    font-family: 'Jura'
+}
 .about h2{ 
     padding: 15px;
     font-size: 25px;
     padding-top: 50px;
+    font-family: 'Jura';
 }
 
 #techbg{
@@ -24,6 +25,7 @@ body > * {
     background-color: #041e42;
     color: white;
     padding: 20px;
+    font-family: 'Jura';
     
 }
 
@@ -32,7 +34,7 @@ body > * {
     margin-left: 200px;
     margin-right: 200px;
     margin-bottom: 10px;
-
+    font-family: 'Jura';
 }
 
 body{ 
@@ -42,12 +44,45 @@ body{
 .hero{
     text-align: center;
     background-color: white;
+    font-family: 'Jura';
 
 }
 .hero h1{ 
     padding: 15px;
     font-size: 35px;
+    font-family: 'Jura';
+    font-weight: bold;
 }
+/* Screen reader used to hide the Social Media Links references */
+.screen-reader-text {
+    border: 0;
+    clip: ClientRect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important
+}
+
+.screen-reader-text:focus {
+    background-color: #eee;
+    clip: auto !important;
+    clip-path: none;
+    color: #444;
+    display: block;
+    font-size: 1em;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 300000; /* Above WP toolbar. */
+  }
 /* VERY CRUCIAL REQUIRED TO DISPLAY: GRID */
 body{display:grid;}
 .navi{grid-area: navi;}
@@ -86,8 +121,6 @@ body{display:grid;}
             "experience-2"
             "experience-3"
             "experience-4"
-            "technical"
-            "soft"
             "links";
 
     
@@ -99,7 +132,7 @@ body{display:grid;}
     body{
         
         grid-template-columns: 33.333% 16.666% 16.666% 33.333%;
-        grid-template-rows: 10vh 55vh 33vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh;
+        grid-template-rows: 4vh 55vh 33vh 30vh 30vh 20vh 10vh 10vh 10vh 5vh;
         /* switch to auto */
         grid-template-areas: 
         "navi navi navi navi"
@@ -111,7 +144,6 @@ body{display:grid;}
         "experience-2 experience-2 experience-2 experience-2"
         "experience-3 experience-3 experience-3 experience-3"
         "experience-4 experience-4 experience-4 experience-4"
-        "technical technical soft soft"
         "links links links links";
     }
 }
@@ -125,6 +157,8 @@ body{display:grid;}
     align-self: center;
     background-color: #ffffff;
     text-align: center;  
+    font-family: 'Jura';
+    border: 3px solid #041e42;
 }
 
 .content-1 ul,
@@ -147,6 +181,7 @@ body{display:grid;}
 .content-3 h2 { /* Adding space between the header and the text */
     padding: 20px;  
     font-size: 25px;
+    font-weight: bold;
 }
 
 .content-1 h4,
@@ -154,6 +189,7 @@ body{display:grid;}
 .content-3 h4 { /* Adding space between the header and the text */ 
     padding: 25px;
     color: #041e42;
+    font-weight: bold;
 }
 
 .content-1 p,
@@ -166,12 +202,87 @@ body{display:grid;}
 
 .content-1 .fas,
 .content-2 .fas,
-.content-3 .far {
+.content-3 .far { /* Font awesome padding*/
     padding: 20px;
 }
 
-.education-1 h2{
-    padding-top: 160px;
+.education-1 h2,
+.education-2 h2{ /* Padding from Content area and font customization */
+    padding-top: 200px;
     font-size: 20px;
-    padding-left: 15px;
+    font-weight: bold;
+}
+
+.education-1,
+.education-2{
+    font-family: 'Jura';
+    padding-left: 25px;
+}
+
+.education-1 p,
+.education-2 p {
+    padding-top: 20px;
+}
+
+.education-2 p{
+    padding-right: 15px;
+}
+
+.experience-1,
+.experience-2,
+.experience-3,
+.experience-4{
+    font-family: 'Jura';
+    background-color: #041e42;
+    color: #ffffff;
+}
+
+.experience-1 h2,
+.experience-2 h2,
+.experience-3 h2,
+.experience-4 h2{
+    font-size: 20px;
+    padding-left: 200px;
+    padding-bottom: 20px;
+}
+
+.experience-1 h1 { /* Experiences title bar */
+    font-size: 25px;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+
+.experience-1 p,
+.experience-2 p,
+.experience-3 p,
+.experience-4 p{
+    padding-left: 200px;
+    padding-right: 150px;
+    padding-bottom: 10px;
+}
+#social-media-links {
+    list-style: none;
+    text-align: center; 
+}
+
+#social-media-links > li {
+    /* Direct childer selector ">" the LI must be DIRECTLY inside the element wit hthe "social-media-links" id in this case. */
+    display: inline-block;
+    padding: 15px;
+}
+
+#social-media-links .fab {
+    color: rgba( 50, 50, 50, 25); /* RGBA - the 'a' stands for ALPHA channel. */ 
+    /* For alpha = 1 opaque; 0 = transparent; */
+    font-size: 32px;
+    /* Changes the icons to any color you want in this case gray */
+}
+
+#social-media-links a:hover .fab,
+#social-meada-links a:focus .fab,
+#social-media-links a:active .fab { /* Pseudo-selector with nesting. */ 
+    color: #041e42;
+    /* Will hover with that color not */
 }
