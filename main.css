@@ -107,7 +107,7 @@ body{display:grid;}
     body{
         display: grid;
         grid-template-columns: 100%; /* 1 columns */ 
-        grid-template-rows: 4vh 80vh 70vh 60vh 55vh 30vh 20vh 30vh 20vh 25vh 25vh 25vh 5vh;
+        grid-template-rows: 4vh 80vh 70vh 60vh 55vh 30vh 15vh 40vh 30vh 25vh 25vh 25vh 5vh;
         grid-template-areas: 
             "navi" 
             "hero"
@@ -155,9 +155,9 @@ body{display:grid;}
     .experience-2 p,
     .experience-3 p,
     .experience-4 p{
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 10px;
+        padding-left: -50px;
+        padding-right: -50px;
+        padding-bottom: 10px;
     }
 }
 
@@ -166,7 +166,7 @@ body{display:grid;}
     body{
         
         grid-template-columns: 33.333% 16.666% 16.666% 33.333%;
-        grid-template-rows: 4vh 75vh 50vh 30vh 40vh 25vh 15vh 10vh 10vh 5vh;
+        grid-template-rows: 4vh 75vh 50vh 30vh 40vh 25vh 10vh 10vh 10vh 5vh;
         /* switch to auto */
         grid-template-areas: 
         "navi navi navi navi"
@@ -320,3 +320,4 @@ body{display:grid;}
     color: #041e42;
     /* Will hover with that color not */
 }
+
