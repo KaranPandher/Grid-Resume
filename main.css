@@ -102,7 +102,7 @@ body{display:grid;}
 .soft{grid-area: soft;}
 .links{grid-area: links;}
 
-/* Mobile Version First */
+/* Mobile Version First -- Extra Small Devices */
 
 @media screen and (min-width: 200px) {
     body{
@@ -123,6 +123,7 @@ body{display:grid;}
             "experience-3"
             "experience-4"
             "links";
+        width: 100%;
     }
     .about p {
         margin-top: 20px;
@@ -166,12 +167,12 @@ body{display:grid;}
     }
 }
 
-/* Desktop Size */ 
+/* Tablet Size -- Medium Devices Landscape Mode */ 
 @media screen and (min-width: 650px) {
     body{
         
         grid-template-columns: 33.333% 16.666% 16.666% 33.333%;
-        grid-template-rows: 4vh 55vh 40vh 30vh 35vh 20vh 10vh 10vh 10vh 5vh;
+        grid-template-rows: 4vh 58vh 45vh 35vh 45vh 25vh 10vh 10vh 10vh 5vh;
         /* switch to auto */
         grid-template-areas: 
         "navi navi navi navi"
@@ -186,6 +187,29 @@ body{display:grid;}
         "links links links links";
     }
 }
+
+/* Large Devices -- Laptops/ Desktops */ 
+@media screen and (min-width: 760px) {
+    body{
+        
+        grid-template-columns: 33.333% 16.666% 16.666% 33.333%;
+        grid-template-rows: 4vh 55vh 35vh 25vh 35vh 20vh 10vh 10vh 10vh 5vh;
+        /* switch to auto */
+        grid-template-areas: 
+        "navi navi navi navi"
+        "hero hero hero hero"
+        "about about about about"
+        "content-1 content-2 content-2 content-3"
+        "education-1 education-1 education-2 education-2"
+        "experience-1 experience-1 experience-1 experience-1"
+        "experience-2 experience-2 experience-2 experience-2"
+        "experience-3 experience-3 experience-3 experience-3"
+        "experience-4 experience-4 experience-4 experience-4"
+        "links links links links";
+    }
+}
+
+
 /* Making the content width smaller but height larger */ 
 .content-1,
 .content-2,
